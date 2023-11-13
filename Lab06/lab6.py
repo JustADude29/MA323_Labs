@@ -30,7 +30,7 @@ def monte_carlo_estimate(N):
     delta = norm.ppf((1-0.95)/2)
     l = mean + (delta*math.sqrt(var))/np.sqrt(N)
     r = mean - (delta*math.sqrt(var))/np.sqrt(N)
-    print(f"for M: {M} -> Estimated value: {mean}, variance: {var}, and 95% confidence interval: [{l}, {r}]")
+    print(f"for M: {M} -> Estimated value: {mean}, variance: {var}, and 95% confidence interval: [{l}, {r}] and width: {r-l:0,.6f}")
 
 M_values = [10**2, 10**3, 10**4, 10**5]
 
